@@ -1,0 +1,60 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Planner</title>
+
+    <link rel="stylesheet" type="text/css" href="css/planner.css" />
+    <script src="libs/jquery-1.7.2.min.js"></script>
+    <script src="libs/handlebars-1.0.0.beta.6.js"></script>
+    <script src="libs/ember-1.0.pre.min.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/data/user.js"></script>
+
+
+    <!--model js-->
+    <script type="text/javascript" src="js/model/event.js"></script>
+    <script type="text/javascript" src="js/model/eventMovie.js"></script>
+    <script type="text/javascript" src="js/model/eventFood.js"></script>
+    <script type="text/javascript" src="js/model/eventAdventure.js"></script>
+    <script type="text/javascript" src="js/model/eventGame.js"></script>
+    <script type="text/javascript" src="js/model/result.js"></script>
+    <script type="text/javascript" src="js/model/planner.js"></script>
+
+    <!--views js-->
+    <script type="text/javascript" src="js/view/buttonView.js"></script>
+    <script type="text/javascript" src="js/view/deleteEventButtonView.js"></script>
+    <script type="text/javascript" src="js/view/addEventButtonView.js"></script>
+    <script type="text/javascript" src="js/view/eventMovieView.js"></script>
+    <script type="text/javascript" src="js/view/eventFoodView.js"></script>
+    <script type="text/javascript" src="js/view/eventAdventureView.js"></script>
+    <script type="text/javascript" src="js/view/eventGameView.js"></script>
+    <script type="text/javascript" src="js/view/eventView.js"></script>
+    <script type="text/javascript" src="js/view/resultView.js"></script>
+    <script type="text/javascript" src="js/view/searchView.js"></script>
+    <script type="text/javascript" src="js/view/plannerView.js"></script>
+
+    <!-- controller js -->
+    <script type="text/javascript" src="js/controller/searchController.js"></script>
+    <script type="text/javascript" src="js/controller/calendarController.js"></script>
+    <script type="text/javascript" src="js/controller/eventController.js"></script>
+    <script type="text/javascript" src="js/controller/plannerController.js"></script>
+
+</head>
+<body onload="PlannerAPP.Controller.calendarController.handleClientLoad()" >
+<iframe src="https://www.google.com/calendar/embed?src=ej2icvrv0gd3as5cla9aljqgec%40group.calendar.google.com&ctz=Asia/Calcutta" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+<!--<div>-->
+<!--<button id="toListEvent" >List Events</button>-->
+<!--</div>-->
+<button id="authorize-button" style="visibility: hidden" onclick='handleAuthClick()'>Authorize</button>
+<script type="text/x-handlebars" >
+    {{#view PlannerAPP.View.PlannerView class="planner" }}{{/view}}
+ </script>
+
+
+</body>
+</html>
+
